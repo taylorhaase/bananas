@@ -28,11 +28,24 @@
         </div>
         </div>
         <script type="text/babel">
+
+            var Buttonify = React.createClass({
+                render: function(){
+                    return(
+                        <div>
+                            <button type={this.props.behavior}>{this.props.children}</button>
+                        </div>
+                    );
+                }
+            });
+
             ReactDOM.render(
-                <h1>Taylor</h1>,
+                <div>
+                    <Buttonify behavior="Submit">SEND DATE</Buttonify>
+                </div>,
                 document.querySelector("#container")
                 );
-
         </script>
+
     </body>
 </html>
